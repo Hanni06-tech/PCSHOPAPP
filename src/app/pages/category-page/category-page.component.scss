@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: "Abel", sans-serif;
+}
+
+
+.category-page {
+  padding: 2rem;
+  text-align: center;
+
+
+
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+  }
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5.5rem;
+  justify-items: center;
+   grid-template-columns: repeat(4, 1fr);
+}
+
+
+  .product-card {
+     color: #ffffff;
+    border-radius: 16px;
+   box-shadow: 0 4px 12px 0px rgba(130, 18, 18, 0.684);
+    transition: all 0.3s ease;
+    padding: 1rem;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+
+
+    &:hover {
+      transform: translateY(-5px);
+       box-shadow: 0 6px 18px 3px rgba(125, 10, 10, 0.67);
+    }
+
+    img {
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+      border-radius: 12px;
+      margin-bottom: 0.8rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .brand {
+      font-size: 0.9rem;
+    }
+
+    .price {
+      font-weight: 600;
+      color: #e63946;
+      margin-top: 0.3rem;
+      font-size: 1rem;
+    }
+
+
+  }
+}
+button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: #6b0d0d;
+    border: none;
+    color: white;
+    transition: 0.3s all;
+    font-size: 16px;
+  
+}
+ 

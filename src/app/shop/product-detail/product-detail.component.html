@@ -1,0 +1,20 @@
+<div class="container">
+<button  (click)="goBack()">
+  go back
+</button>
+ <div class="m-c">
+   <div class="detail-box">
+      
+  <img [src]="product?.image" alt="{{ product?.name }}"/>
+<div class="m-d">
+  <h2>{{ product?.name }}</h2>
+  <p>Brand: {{ product?.brand }}</p>
+  <p>{{ product?.price | currency }}</p>
+    <p>{{product?.text}}</p>
+    <button (click)="addToCart()">add to cart</button>
+</div>
+
+</div>
+
+
+</div>

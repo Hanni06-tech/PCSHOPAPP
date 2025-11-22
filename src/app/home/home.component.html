@@ -1,0 +1,51 @@
+
+<div class="p-effect"  (mousemove)="onMouseMove($event)">
+     <div class="l-b">
+        <p>BUILD YOUR OWN PC</p>
+      
+<button class="login" routerLink="/shop">Start</button>
+
+    </div>
+ 
+  <!-- Slideshow wrapper -->
+  <div class="slideshow">
+    <img *ngFor="let img of images; let i = index"
+         [src]="img"
+         class="slide"
+         [class.active]="i === currentIndex">
+  </div>
+  
+</div>
+
+
+
+<div class="container">
+<!-- Search Bar -->
+<div class="search-bar">
+  <input
+    type="text"
+    placeholder="Search category (e.g., cpu)"
+    [(ngModel)]="searchTerm"
+    (input)="onSearch()"
+  >
+</div>
+
+<!-- Products Grid (first 3 matching) -->
+<div class="products-grid">
+  <div class="product-card" *ngFor="let product of filteredProducts">
+    <img [src]="product.image" [alt]="product.name">
+    <h3>{{ product.name }}</h3>
+    <p>{{ product.brand }}</p>
+    <p class="price">{{ product.price | currency }}</p>
+    <button [routerLink]="['/shop', product.category, product.id]" >
+      View Details
+    </button>
+  </div>
+</div>
+
+<!-- View More Button -->
+<div class="view-more-container" *ngIf="filteredProducts.length > 0 && filteredProducts.length < getFilteredCount()">
+  <button (click)="viewMore()">View More</button>
+</div>
+
+</div>

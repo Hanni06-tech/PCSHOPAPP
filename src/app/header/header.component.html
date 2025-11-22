@@ -1,0 +1,72 @@
+     <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+ 
+ <div class="center">
+      <div class="nav">
+        <input type="checkbox" name="" id="menu" />
+        <div routerLink="/" class="logo" style="cursor: pointer;">
+            PC SHOP
+          <label for="menu"></label>
+        </div>
+
+        <div class="nav-bar">
+          <a routerLink="/" class="link-underline">Home</a>
+
+
+           <!-- Shop with dropdown -->
+  <div class="shop-hover"   (mouseenter)="onDesktop && (showShop = true)"
+  (mouseleave)="onDesktop && (showShop = false)"
+  (click)="!onDesktop && (showShop = !showShop)">
+  <a routerLink="/shop" class="link-underline">Shop</a>
+
+  <div
+    class="shop-box"
+    *ngIf="showShop || mobileMenuOpen"
+    (mouseenter)="showShop = true"
+    (mouseleave)="showShop = false"
+  >
+    <div class="shop-column">
+      <h4>PC Parts</h4>
+      <a routerLink="/shop/cpu">CPU</a>
+      <a routerLink="/shop/gpu">GPU</a>
+      <a routerLink="/shop/motherboard">Motherboard</a>
+      <a routerLink="/shop/cooler">Coolers</a>
+      <a routerLink="/shop/ram">ram</a>
+    </div>
+    <div class="shop-column">
+      <h4>Accessories</h4>
+      <a routerLink="/shop/keyboard">Keyboards</a>
+      <a routerLink="/shop/mouse">Mouse</a>
+      <a routerLink="/shop/headset">Headsets</a>
+      <a routerLink="/shop/mousepad">Mouse Pads</a>
+      <a routerLink="/shop/mic">mic</a>
+    </div>
+  </div>
+</div>
+          <a routerLink="/service" class="link-underline">service</a>
+          <a routerLink="/contact" class="link-underline">contact</a>
+          <button class="s-b" (click)="handleButton()">{{ getButtonText() }}</button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+

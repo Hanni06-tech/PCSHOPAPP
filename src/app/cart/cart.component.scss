@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: "Abel", sans-serif;
+}
+.cart-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .empty {
+    text-align: center;
+    color: #777;
+  }
+
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1e1e1e;
+    padding: 12px;
+    border-radius: 10px;
+    color: white;
+
+    img {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    button {
+      background: #ff5252;
+      border: none;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s ease;
+
+      &:hover {
+        background: #ff3b3b;
+      }
+    }
+  }
+
+  .cart-summary {
+    margin-top: 20px;
+    text-align: right;
+
+    button {
+      background: #1db954;
+      border: none;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+
+      &:hover {
+        background: #17a34a;
+      }
+    }
+  }
+}

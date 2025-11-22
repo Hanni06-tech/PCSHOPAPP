@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: "Abel", sans-serif;
+}
+.privacy-container {
+width: 80%;
+  margin:120px 190px;
+  padding: 30px 80px;
+  color: #eaeaea;
+  background: #000000;
+  box-shadow: 0 4px 40px 20px  rgba(130, 18, 18, 0.537);
+  border-radius: 15px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.updated {
+  color: #888;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+p {
+  line-height: 1.6;
+}
+
+ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}

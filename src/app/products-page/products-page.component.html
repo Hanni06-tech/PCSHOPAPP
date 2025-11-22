@@ -1,0 +1,55 @@
+<div class="container">
+
+  <!-- FILTER BUTTON + SIDEBAR -->
+  <div class="filter-hover"
+       (mouseenter)="showFilter = true"
+       (mouseleave)="showFilter = false">
+
+    <p class="link-underline">Filter</p>
+
+    <div class="filter-box"
+         *ngIf="showFilter || mobileMenuOpen"
+         (mouseenter)="showFilter = true"
+         (mouseleave)="showFilter = false">
+
+      <div class="filter-column">
+        <h1>Filters</h1>
+
+        <h3>Price</h3>
+        <input type="number" placeholder="Min" [(ngModel)]="minPrice" >
+        <input type="number" placeholder="Max" [(ngModel)]="maxPrice">
+
+        <h3>Category</h3>
+        <div *ngFor="let c of categories">
+          <label>
+            <input type="checkbox" [(ngModel)]="selectedCategories[c]">
+            {{ c }}
+          </label>
+        </div>
+
+        <button (click)="applyFilter()">Apply</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PRODUCTS GRID -->
+  <div class="products-grid">
+    <div class="product-card" *ngFor="let product of filteredProducts">
+      <img [src]="product.image" [alt]="product.name">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.brand }}</p>
+      <p class="price">{{ product.price | currency }}</p>
+      <button [routerLink]="['/shop', product.category, product.id]">
+        View Details
+      </button>
+    </div>
+  </div>
+
+  <!-- VIEW MORE -->
+  <div class="view-more-container"
+       *ngIf="filteredProducts.length > 0 && filteredProducts.length < allProducts.length">
+    <button (click)="viewMore()">View More</button>
+  </div>
+
+</div>

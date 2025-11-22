@@ -1,0 +1,44 @@
+{
+ 
+
+
+  "users": [
+    {
+      "id": "1",
+      "email": "test@example.com",
+      "password": "123456",
+      "username": "TestUser"
+    },
+    {
+      "id": "2",
+      "email": "user2@example.com",
+      "password": "abcdef",
+      "username": "AnotherUser"
+    },
+    {
+      "id": "4466",
+      "email": "user@gmail.com",
+      "password": "user12345"
+    },
+    {
+      "id": "6206",
+      "email": "user@gmail.com",
+      "password": "user12345"
+    },
+    {
+      "id": "747f",
+      "email": "user@gmail.com",
+      "password": "user12345"
+    },
+    {
+      "id": "f988",
+      "email": "user@gmail.com",
+      "password": "user12345"
+    },
+    {
+      "id": "d630",
+      "email": "user@gmail.com",
+      "password": "user12345"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+<div class="category-page">
+  <h2>{{ categoryName | titlecase }}</h2>
+
+  <div class="product-grid">
+    <div class="product-card" *ngFor="let product of filteredProducts"
+         [routerLink]="['/shop', categoryName, product.id]">
+
+      <img [src]="product.image" alt="{{ product.name }}" />
+      <h3>{{ product.name }}</h3>
+      <p class="brand">{{ product.brand }}</p>
+      <p class="price">{{ product.price | currency }}</p>
+
+      <!-- CPU extra info -->
+ <button [routerLink]="['/shop', product.category, product.id]" >
+      View Details
+    </button>
+    </div>
+  </div>
+</div>
+

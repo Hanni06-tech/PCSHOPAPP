@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: "Abel", sans-serif;
+}
+
+.contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 40px 20px;
+  background: #000000;
+    box-shadow: 0 4px 40px 20px  rgba(130, 18, 18, 0.537);
+  border-radius: 15px;
+  color: #eaeaea;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.subtitle {
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.info-box {
+  flex: 1;
+  min-width: 260px;
+}
+
+.info-box h2 {
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.info-box p {
+  line-height: 1.6;
+}
+
+.info-list {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.info-list li {
+  margin-bottom: 10px;
+}
+
+/* Form */
+.contact-form {
+  flex: 1;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  color: #ccc;
+}
+
+input,
+textarea {
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #2a2a2a;
+  color: white;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid #555;
+}
+
+button {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #3b82f6;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #2563eb;
+}
