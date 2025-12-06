@@ -19,18 +19,20 @@
     color: #ffffff;
   }
 .product-grid {
-  display: flex;
+ display: flex;
+  max-width: 1200px;
+  align-items: center;
+  gap: 80px;
+  margin: 100px auto;
   flex-wrap: wrap;
-  gap: 5.5rem;
-  justify-items: center;
-   grid-template-columns: repeat(4, 1fr);
+justify-content: space-around;
 }
 
 
   .product-card {
-     color: #ffffff;
+   color: #ffffff;
     border-radius: 16px;
-   box-shadow: 0 4px 12px 0px rgba(130, 18, 18, 0.684);
+     box-shadow: 0 4px 12px 0px rgba(130, 18, 18, 0.684);
     transition: all 0.3s ease;
     padding: 1rem;
     width: 100%;
@@ -40,7 +42,7 @@
 
     &:hover {
       transform: translateY(-5px);
-       box-shadow: 0 6px 18px 3px rgba(125, 10, 10, 0.67);
+     box-shadow: 0 6px 18px 3px rgba(125, 10, 10, 0.67);
     }
 
     img {

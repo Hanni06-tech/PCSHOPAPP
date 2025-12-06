@@ -22,7 +22,7 @@ mobileMenuOpen = false;
 minPrice: number | null = null;
 maxPrice: number | null = null;
 categories =[
-  'cpu','gpu','motherboard','ram','cooler', 'keyboard','mouse','mousepad','headset','microphone','headest'
+  'cpu','gpu','motherboard','ram','cooler', 'keyboard','mouse','mousepad','headset','mic','headest'
 ];
 selectedCategories:any = {};
   filteredAll: Product[] = [];
