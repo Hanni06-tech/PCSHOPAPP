@@ -14,18 +14,30 @@ import { Product } from '../../models/product.model';
 export class CategoryPageComponent implements OnInit {
   categoryName = '';
   filteredProducts: Product[] = [];
-
+  filteredAll: Product[] = [];
+  itemsToShow = 3;
   constructor(private route: ActivatedRoute, private productService: ProductService) {}
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-      this.categoryName = params.get('category') ?? '';
+     this.route.paramMap.subscribe(params => {
+     this.categoryName = params.get('category') ?? '';
+
+
+     this.itemsToShow = 3;  // reset every time category changes
 
       this.productService.getAll().subscribe(products => {
-        this.filteredProducts = products.filter(p => p.category === this.categoryName);
+      this.filteredAll = products.filter(p => p.category === this.categoryName);
+      this.filteredProducts = this.filteredAll.slice(0, this.itemsToShow);
+
       });
-    });
+      });
   }
+  
+  viewMore() {
+  this.itemsToShow += 3;  
+  this.filteredProducts = this.filteredAll.slice(0, this.itemsToShow);
+}
+
 }
 
 

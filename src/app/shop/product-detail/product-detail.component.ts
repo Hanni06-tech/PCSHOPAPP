@@ -46,7 +46,7 @@ fromPage: string = '';
   if (this.fromPage === 'shop') {
     this.router.navigate(['/shop']);
   } else {
-    this.router.navigate(['/shop', this.category]);
+    this.router.navigate(['/shop']);
   }
 }
 }

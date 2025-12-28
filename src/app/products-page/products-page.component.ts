@@ -12,12 +12,13 @@ import { FormsModule, NgModel } from '@angular/forms';
   styleUrl: './products-page.component.scss'
 })
 export class ProductsPageComponent {
+  showFilter = false;
+  mobileFilterOpen = false;
   allProducts = products;      // all products from your data file
   filteredProducts: Product[] = [];       // list currently shown on screen
   itemsToShow = 6;             // initial number to display
   
-showFilter = false;
-mobileMenuOpen = false;
+
 
 minPrice: number | null = null;
 maxPrice: number | null = null;
@@ -44,6 +45,7 @@ viewMore() {
 
    
 applyFilter() {
+   this.itemsToShow = 6;
   // 1. Filter all products
   this.filteredAll = this.allProducts.filter(p => {
     const selected = Object.keys(this.selectedCategories)
@@ -63,6 +65,5 @@ applyFilter() {
   this.filteredProducts = this.filteredAll.slice(0, this.itemsToShow);
 }
 
-toggleMobileMenu() {
-  this.mobileMenuOpen = !this.mobileMenuOpen;}
+
 }

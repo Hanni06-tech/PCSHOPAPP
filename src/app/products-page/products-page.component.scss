@@ -5,15 +5,19 @@
     font-family: "Abel", sans-serif;
 }
 .container {
-  position: relative;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
   padding: 20px;
+
   
 }
 
 /* FILTER BUTTON / AREA */
 .filter-hover {
-  display: inline-block;
-  position: relative;
+  display: block;
+
+  width: 320px;
   cursor: pointer;
 
   .link-underline {
@@ -24,31 +28,54 @@
     transition: 0.2s;
   }
 }
+.mobile-filter-btn{
+  display: none;
+  margin-bottom:20px ;
+  padding: 10px 10px;
+  color: white;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mobile-filter-btn:hover{
+   
+    transform: scale(1.05);
+}
 
 /* DROPDOWN BOX */
 .filter-box {
-  position: absolute;
-  top: 40px;
-  left: 0;
 
   background-color: #000000;
   padding: 20px;
-  width: 220px;
+  width: 100%;
+  max-width: 320px;
   border: none;
   border-radius: 12px;
-
-   box-shadow: 0 4px 12px 0px rgba(130, 18, 18, 0.684);
+  box-shadow: 0 4px 12px 0px rgba(130, 18, 18, 0.684);
   animation: fadeIn 0.2s ease-out;
   z-index: 10;
-
+input{
+    padding: 8px 13px;
+    font-size: 16px;
+    border-radius: 30px;
+    background-color: #ffffff;
+    border: none;
+    color: white ;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
   .filter-column {
     display: flex;
     flex-direction: column;
     gap: 10px;
-transition: 0.3s ease;
+    font-size: 18px;
 
 button{
     padding: 8px 13px;
+    width: 40%;
+    margin: auto;
     font-size: 16px;
     border-radius: 30px;
     background-color: #6b0d0d;
@@ -58,13 +85,6 @@ button{
     transition: all 0.3s ease;
     }
 }
-    h1 {
-      font-size: 20px;
-      margin-bottom: 10px;
-      border-bottom: 1px solid #444;
-      padding-bottom: 5px;
-      color: #fff;
-    }
 
     p {
       margin: 0;
@@ -80,17 +100,90 @@ button{
     }
   }
 
-.do{
-  background-color: red;
+  @media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .filter-hover {
+    width: 100%;
+
+  }
+
+  .filter-box {
+    width: 100%;
+    border-radius: 14px;
+  }
 }
+
+@media screen and (max-width: 1199px) {
+.filter-hover{
+     position: fixed;           /* 🔥 KEY */
+     z-index: 1000;
+    display: none; /* hide sidebar by default */
+      
+}
+  .mobile-filter-btn{
+    display: block;
+    z-index: 1100;
+    position: fixed;
+  }
+  
+    .filter-hover.show {
+        display: block;
+       
+    }
+.filter-hover.show ~ .products-area {
+  pointer-events: none;
+  filter: blur(2px);
+}
+
+    .filter-box {
+        width: 85%;
+    max-width: 360px;
+    height: 100%;
+    background: #000;
+    padding: 20px;
+    border-radius:30px;
+    animation: slideIn 0.3s ease;
+  
+    }
+
+    .container {
+      display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .products-grid {
+        justify-content: center;
+        gap: 20px;
+    }
+  }
+  @keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+
+}
+
+
+
 .products-grid {
+  flex: 1;
   display: flex;
   max-width: 1200px;
   align-items: center;
   gap: 80px;
   margin: 100px auto;
   flex-wrap: wrap;
-justify-content: space-around;
+  justify-content: space-around;
+
+
   .product-card {
     color: #ffffff;
     border-radius: 16px;
@@ -100,6 +193,7 @@ justify-content: space-around;
     width: 100%;
     max-width: 250px;
     text-align: center;
+    
    .price {
       font-weight: 600;
       color: #e63946;
@@ -136,6 +230,7 @@ justify-content: space-around;
   text-align: center;
 
   button {
+    color: white;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 30px;

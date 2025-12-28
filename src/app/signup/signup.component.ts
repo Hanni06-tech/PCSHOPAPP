@@ -13,7 +13,7 @@ import { AuthService } from '../services/auth.service';
 
 })
 export class SignupComponent {
-    user = { email: '', password: '' };
+    user = {username:'', email: '', password: '' };
 
   constructor(private auth: AuthService, private router: Router) {}
 

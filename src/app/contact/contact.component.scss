@@ -4,14 +4,16 @@
     box-sizing: border-box;
     font-family: "Abel", sans-serif;
 }
-
+.center{
+  min-height: 70vh;
+}
 .contact-container {
   max-width: 900px;
   margin: 0 auto;
   margin-top: 100px;
   padding: 40px 20px;
   background: #000000;
-    box-shadow: 0 4px 40px 20px  rgba(130, 18, 18, 0.537);
+  box-shadow: 0 4px 40px 20px  rgba(130, 18, 18, 0.537);
   border-radius: 15px;
   color: #eaeaea;
 }
@@ -77,23 +79,24 @@ input,
 textarea {
   margin-top: 5px;
   padding: 10px;
+  font-size: 14px;
   border-radius: 8px;
-  border: none;
-  background: #2a2a2a;
+  border:  1px solid rgb(48, 5, 5);
+  background: #000000;
   color: white;
   outline: none;
 }
 
 input:focus,
 textarea:focus {
-  border: 1px solid #555;
+  border: 1px solid #5f1515;
 }
 
 button {
   padding: 12px;
   border-radius: 8px;
   border: none;
-  background: #3b82f6;
+  background: #380505;
   cursor: pointer;
   color: white;
   font-size: 16px;
@@ -101,5 +104,5 @@ button {
 }
 
 button:hover {
-  background: #2563eb;
+  background: #1c0101;
 }

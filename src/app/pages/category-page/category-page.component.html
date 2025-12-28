@@ -15,6 +15,12 @@
       View Details
     </button>
     </div>
-  </div>
+  
+
+  </div> 
+   <div class="view-more-container"
+     *ngIf="filteredProducts.length < filteredAll.length">
+  <button (click)="viewMore()">View More</button>
+</div>
 </div>
 
