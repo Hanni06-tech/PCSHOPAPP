@@ -19,8 +19,8 @@ export class SignupComponent {
 
  onSignup() {
     this.auth.signup(this.user).subscribe({
-      next: () => {
-        
+      next: (createdUser) => {
+        console.log("User created:", createdUser); 
         this.router.navigate(['/login']);
       },
       error: (err) => {

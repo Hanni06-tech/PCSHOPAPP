@@ -12,12 +12,17 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  signup(user: any): Observable<any> {
-    return this.http.post(this.apiUrl, user);
-  }
- login(email: string, password: string): Observable<any> {
-  return this.http.get(`${this.apiUrl}?email=${email}&password=${password}`);
-}  
+signup(user: any){
+  return this.http.post("http://localhost:4000/signup", user);
+}
+
+
+login(email:string, password: string){
+  return this.http.post("http://localhost:4000/login", {
+    email,
+    password
+  });
+} 
   isLoggedIn(): boolean {
     return !!localStorage.getItem('user');
   }

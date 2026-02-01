@@ -17,17 +17,15 @@ export class LoginComponent {
 
   constructor(private auth: AuthService, private router: Router) {}
 
- onLogin() {
-  this.auth.login(this.email, this.password).subscribe((res: any) => {
-    if (res.length > 0) {
-      // ✅ Save user info (keeps user logged in)
-      localStorage.setItem('user', JSON.stringify(res[0]));
-
-    
-      this.router.navigate(['/']);
-    } else {
-      alert('Invalid credentials');
-    }
-  });
-}
+  onLogin() {
+    this.auth.login(this.email, this.password).subscribe({
+      next: (response: any) => {
+        localStorage.setItem('user', JSON.stringify(response));
+        this.router.navigate(['/']);
+      },
+      error: () =>{
+        alert('Invalid email or password');
+      }
+    });
+  }
 }
